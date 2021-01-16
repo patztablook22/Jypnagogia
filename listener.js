@@ -1,7 +1,11 @@
+const audio = new Audio("media/ding.mp3");
+
 class Panic {
   constructor(container) {
     this.container = container;
     this.on = false;
+    this.interval = null;
+    this.audio = null;
   }
 
   start() {
@@ -10,7 +14,20 @@ class Panic {
     else
       this.on = true;
     console.log("panic");
-    this.container.style.backgroundColor = "white";
+
+    let color = "white";
+
+    this.interval = window.setInterval(() => {
+
+      this.container.style.backgroundColor = color;
+      audio.play();
+
+      if (color == "white")
+        color = "black"
+      else
+        color = "white"
+
+    }, 100);
   }
 
   stop() {
@@ -20,13 +37,12 @@ class Panic {
       this.on = false;
     console.log("calm");
     this.container.style.backgroundColor = "black";
+    clearInterval(this.interval);
   }
 
-  capture() {
+  listen() {
     window.onkeyup      = this.start;
     window.onkeydown    = this.stop;
-    window.ontouchend   = this.start;
-    window.ontouchstart = this.stop;
   }
 }
 
@@ -34,6 +50,5 @@ class Panic {
 document.addEventListener("DOMContentLoaded", () => {
   let ctn = document.querySelector("#container");
   const panic = new Panic(ctn);
-  panic.capture();
-  window.navigator.vibrate([300, 100, 200, 50, 300]);
+  panic.listen();
 });
