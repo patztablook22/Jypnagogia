@@ -4,12 +4,13 @@ class Panic {
     this.on = false;
   }
 
-  start(e) {
+  start() {
     if (this.on)
       return;
     else
       this.on = true;
-    console.log("started");
+    console.log("panic");
+    this.container.style.backgroundColor = "white";
   }
 
   stop() {
@@ -17,12 +18,13 @@ class Panic {
       return
     else
       this.on = false;
-    console.log("panic");
+    console.log("calm");
+    this.container.style.backgroundColor = "black";
   }
 
   capture() {
-    window.onkeydown = this.start;
-    window.onkeyup   = this.stop;
+    window.onkeydown = this.stop;
+    window.onkeyup   = this.start;
   }
 }
 
