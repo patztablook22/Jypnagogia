@@ -1,6 +1,7 @@
 # Jypnagogia
 Javascript tool for maintaining hypnagogic state
-**WARNING: contains flashing elements**
+
+**WARNING: contains flashing elements** \
 **WARNING: annoying**
 
 ## Guide
