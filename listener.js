@@ -25,7 +25,7 @@ class Panic {
   capture() {
     window.onkeyup      = this.start;
     window.onkeydown    = this.stop;
-    window.ontouchdown  = this.start;
+    window.ontouchend   = this.start;
     window.ontouchstart = this.stop;
   }
 }
