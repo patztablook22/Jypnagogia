@@ -5,7 +5,6 @@ class Panic {
     this.container = container;
     this.on = false;
     this.interval = null;
-    this.audio = null;
   }
 
   start() {
