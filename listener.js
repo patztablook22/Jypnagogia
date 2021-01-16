@@ -35,4 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
   let ctn = document.querySelector("#container");
   const panic = new Panic(ctn);
   panic.capture();
+  window.navigator.vibrate([300, 100, 200, 50, 300]);
 });
