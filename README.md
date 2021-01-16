@@ -2,7 +2,7 @@
 Javascript tool for maintaining hypnagogic state
 
 **WARNING: contains flashing elements** \
-**WARNING: annoying**
+**WARNING: f\*\*cking annoying**
 
 ## Guide
 1. setup your laptop IRL so it's next to you
