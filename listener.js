@@ -45,7 +45,6 @@ class Panic {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   let ctn = document.querySelector("#container");
   const panic = new Panic(ctn);
