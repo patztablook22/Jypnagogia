@@ -23,8 +23,10 @@ class Panic {
   }
 
   capture() {
-    window.onkeydown = this.stop;
-    window.onkeyup   = this.start;
+    window.onkeyup      = this.start;
+    window.onkeydown    = this.stop;
+    window.ontouchdown  = this.start;
+    window.ontouchstart = this.stop;
   }
 }
 
